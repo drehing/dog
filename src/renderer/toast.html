@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:;"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dog 通知</title>
+    <link rel="stylesheet" href="toast.css" />
+  </head>
+  <body>
+    <div class="toast" id="toast" data-kind="system">
+      <div class="accent"></div>
+      <div class="icon" id="icon">🐕</div>
+      <div class="content">
+        <div class="head">
+          <div class="title" id="title">Dog 秘书</div>
+          <div class="time" id="time"></div>
+          <button class="close" id="close" title="关闭" aria-label="关闭">✕</button>
+        </div>
+        <div class="body" id="body"></div>
+      </div>
+      <div class="progress"><i id="bar"></i></div>
+    </div>
+    <script src="toast.js"></script>
+  </body>
+</html>

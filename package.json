@@ -1,0 +1,51 @@
+{
+    "name": "dog-secretary",
+    "version": "1.0.5",
+    "description": "Dog 秘书 — Windows 桌面 AI 秘书：事务管理、智能体监工、汇总播报",
+    "main": "src/main/main.js",
+    "author": "Dog",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start": "node scripts/start.js",
+        "dev": "node scripts/start.js --dev",
+        "test": "node --test",
+        "smoke": "node scripts/smoke.js",
+        "smoke:onboarding": "node scripts/smoke.js onboarding",
+        "pack": "electron-builder --win --dir",
+        "dist": "electron-builder --win",
+        "start:compat": "node scripts/start.js --compat"
+    },
+    "devDependencies": {
+        "electron": "^45.0.0",
+        "electron-builder": "^26.0.0"
+    },
+    "build": {
+        "appId": "com.dog.secretary",
+        "productName": "Dog Secretary",
+        "directories": {
+            "output": "release"
+        },
+        "files": [
+            "src/**/*",
+            "assets/**/*",
+            "scripts/**/*",
+            "package.json"
+        ],
+        "asarUnpack": [
+            "scripts/**/*"
+        ],
+        "win": {
+            "target": [
+                "nsis"
+            ],
+            "icon": "assets/icon.ico"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "shortcutName": "Dog秘书"
+        }
+    }
+}

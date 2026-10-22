@@ -1,0 +1,17 @@
+node_modules/
+release/
+dist/
+screenshots/
+screenshots-onboard/
+.release-smoke-data/
+release-screenshots/
+.smoke-data/
+.smoke-onboard/
+.diag/
+.diag2/
+.diag3/
+*.log
+*.tmp-*
+assets/icon-256.png
+assets/tray-16.png
+data/
